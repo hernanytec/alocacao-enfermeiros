@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alocação de enfermeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="controls">
+        <h1>Alocação de enfermeiros</h1>
+        <h2> E = <input id="inputE" type="number" value="10"> </h2>
+
+        <div>
+            <input type="radio" name="search" value="hc" checked>Subida de Encosta<br>
+            <input type="radio" name="search" value="hc2">Subida de Encosta pelo Maior Aclive<br>
+            <input type="radio" name="search" value="bf">Melhor primeiro<br>
+        </div>
+        <button id="search" onclick="startSearch()">Começar a busca</button>
+    </div>
+
+    <table id="container">
+
+    </table>
+
+    <script src="show.js"></script>
+    <script src="constraints.js"></script>
+    <script src="search.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
