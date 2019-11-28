@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alocação de enfermeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="controls">
+        <h1>Alocação de enfermeiros</h1>
+        <h2> E = <input id="inputE" type="number" value="10"> </h2>
+
+        <div>
+            <div class="params">
+                <input type="radio" name="search" value="ts" checked>Têmpera Simulada
+
+                <input style="margin: 0 10px;" type='number' id="inputT" placeholder="T inicial (default: 350)"></input>
+                <input type='number' id="setState"
+                    title="Digite os n dígitos que compõe o estado. Caso digite menos, será completado com zero"
+                    placeholder="Estado incial (default: random)"></input>
+            </div>
+
+            <div class="params">
+                <input type="radio" name="search" value="ag">Algoritmo genético<br>
+
+                <input type="number" title="tamanho da população: def 40" style="margin: 0 10px;"
+                    placeholder="População(40)">
+                <input type="number" title="quantidade de gerações: def 120" placeholder="Gerações(120)">
+                <input type="number" title="probabilidade de mutação: def 5%" style="margin: 0 10px;"
+                    placeholder="Mutação(5%)">
+                <input type="elitismo" title="probabilidade de elitismo: def 25%" placeholder="Elitismo(25%)">
+
+            </div>
+        </div>
+        <button id="search" onclick="startSearch()">Começar a busca</button>
+    </div>
+
+    <table id="container">
+
+    </table>
+
+    <script src="show.js"></script>
+    <script src="constraints.js"></script>
+    <script src="search.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
